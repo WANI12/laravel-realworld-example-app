@@ -81,7 +81,7 @@ class User extends Authenticatable
 
         return Article::loadRelations()->whereIn('user_id', $followingIds);
     }
-
+    
     /**
      * Get the key name for route model binding.
      *

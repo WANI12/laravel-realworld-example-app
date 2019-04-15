@@ -28,4 +28,12 @@ abstract class TestCase extends BaseTestCase
             'Authorization' => "Token {$this->loggedInUser->token}"
         ];
     }
+    public function ArticlePostTect(){
+        $article=factory(\App\Article::class)->times(4)->create();
+        $this->article=$article[0];
+        $this->article=$article[1];
+        $this->headers=[
+            'response'=>"Added successfullt"
+        ];
+    }
 }
